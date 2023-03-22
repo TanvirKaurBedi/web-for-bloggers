@@ -1,18 +1,34 @@
 <template>
-  <div>
-    <SreenCom2></SreenCom2>
-    <!-- <router-view></router-view> -->
+  <div id="divNavigationBar">
+    <navgationPage></navgationPage>
+  </div>
 
+  <div id="divContent">
+    <router-view></router-view>
   </div>
 </template>
-<script>
 
-import SreenCom2 from "./components/ScreenCom2.vue"
+<script>
+import navgationPage from './components/navgationPage.vue'
 export default {
   name: "App",
   components: {
-    SreenCom2
-  },
+    navgationPage
+  }
+
 }
 </script>
 
+<style>
+#divNavigationBar {
+overflow: hidden;
+position:fixed;
+top:0;
+width:100%
+}
+#divContent{
+  padding: 16px;
+  margin-top: 120px;
+  height: 1500px;
+}
+</style>
